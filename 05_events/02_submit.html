@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện submit form</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+        input{
+            display: block;
+            margin-bottom: 15px;
+        }
+    </style>
+    <h1>Sự kiện submit form</h1>
+    <form action="" method="POST" id="target">
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username">
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password">
+        <input type="submit" name="sm-login" value="Login">
+    </form>
+    <a href="" id="other">Other</a>
+    <script>
+        $(document).ready(function() { 
+            $('form#target').submit(function() {
+                var username = $('#username').val();
+                var password = $('#password').val();
+                alert(username + " - " + password);
+                return false; // Ngăn form submit thông thường
+            });
+
+            $('a#other').click(function() {
+                $('form#target').submit();
+            });
+        });
+    </script>
+</body>
+</html>

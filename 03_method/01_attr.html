@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức xử lý thuộc tính</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+</head>
+<img>
+    <img src="image.png" alt="" title="Anh Camera">
+    <a href="#" class="get-title-img">Lấy title ảnh</a>
+
+    <a href="#" class="remove-attr">Hủy giá trị thuộc tính</a>
+    <script>
+        $(document).ready(function() { 
+           // Click vào thẻ a và hiển thị lên title hình ảnh thông qua alert
+            $('a.get-title-img').click(function() {
+                var title_img;
+                title_img = $('img').attr('title');
+            // Set
+                title_img = $('img').attr('title', 'Camera I');
+                alert(title_img);
+                return false;
+            });
+
+            $('a.remove-attr').click(function() {
+                $('img').removeAttr('src');
+                
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

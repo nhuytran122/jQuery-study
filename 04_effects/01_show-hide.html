@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm hiệu ứng show, hide</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+        #box{
+            width: 400px;
+            padding: 40px;
+            background: #00cec9;
+            text-align: center;
+            color: #fff;
+            display: none;
+        }
+    </style>
+    <h1>Nhóm hiệu ứng show, hide</h1>
+    <a href="" id="effect-show">Show</a>
+    <a href="" id="effect-hide">Hide</a>
+    <a href="" id="effect-toggle">Toggle</a>
+    <div id="box">
+        BOX
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ducimus odit eaque voluptatem. Eaque asperiores nostrum, repellendus illo, laborum blanditiis corrupti enim ipsa perspiciatis tempora autem odio sed esse eius aut necessitatibus cupiditate officiis, consectetur vitae? Eius quaerat exercitationem distinctio facere quia a suscipit iure numquam dolore vitae quas debitis alias consectetur voluptate beatae eligendi sint quidem quisquam corrupti, quod incidunt et officiis ex. Veniam error pariatur enim culpa! Sint nostrum vitae impedit, expedita reprehenderit esse voluptatum nam, laudantium sunt maiores facere iure in. Aliquam suscipit incidunt in soluta assumenda amet harum, animi impedit aliquid delectus exercitationem adipisci excepturi eligendi voluptatibus ut doloribus repellendus sunt similique ab obcaecati reiciendis? Laborum dolorum molestias sint repudiandae unde fuga autem accusamus voluptas aliquid architecto iusto doloribus culpa eius nulla, quisquam inventore corrupti nihil nostrum amet expedita perspiciatis consequuntur a similique porro! Libero deleniti rem omnis distinctio explicabo fugiat ullam temporibus voluptas repellendus fuga!
+    </p>
+    <script>
+        $(document).ready(function() { 
+            $('#effect-show').click(function() {
+                // $('#box').show(1000, function() {
+                //     alert('done');
+                // });
+
+                $('#box').show(1000);
+                return false;
+            });
+
+            $('#effect-hide').click(function() {
+                $('#box').hide(1000);
+                return false;
+            });
+
+            $('#effect-toggle').click(function() {
+                $('#box').toggle(1000);
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

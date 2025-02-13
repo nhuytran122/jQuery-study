@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm phương thức khoảng cách, tọa độ</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            font-style: 14px;
+            font-family: Arial;
+            line-height: 25px;
+        }
+        #wrapper{
+            width: 1800px;
+            margin: 0px auto;
+        }
+        #header, #footer{
+            background: #333;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        #content{
+            padding: 20px 0px;
+        }
+        #content p{
+            position: relative;
+            margin-bottom: 15px;
+        }
+        .widget{
+            width: 100px;
+            height: 50px;
+            background: red;
+            position: absolute;
+            top: 500px;
+            left: 200px;
+        }
+    </style>
+    
+    <div id="wrapper">
+        <div id="header">
+            Header
+        </div>
+        <div id="content">
+            Content
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores nesciunt, voluptates est sit atque modi fuga consequuntur excepturi sunt exercitationem consequatur magni laboriosam esse commodi neque obcaecati quibusdam voluptatibus accusamus nobis? Dolorem harum illo, architecto libero pariatur id mollitia placeat nisi dolores quaerat quos suscipit fugit soluta ad, natus, iste nesciunt temporibus hic ab. Alias delectus quae exercitationem, deserunt dolorem iste laboriosam laudantium odit ducimus aperiam eligendi eum voluptatum rerum inventore. Eos sequi neque vero ut accusantium quidem, repudiandae eius maxime ipsam tenetur, voluptatibus ab culpa illo voluptatum? Perferendis, repudiandae. Consequatur repellat corrupti nam, aperiam ex reiciendis magnam et, officia itaque sint incidunt eaque sed delectus explicabo veniam consectetur eveniet, unde tempore. Dicta nisi exercitationem perspiciatis esse cupiditate blanditiis illum nihil non facere ex sequi qui corrupti consequuntur, rem quaerat? Minus quod laudantium modi consequatur quisquam illum? Nisi eos molestias corrupti minima id asperiores perferendis doloribus sunt, recusandae, quaerat hic.</p>
+            <p>Iste quasi esse rem hic consectetur. Magnam provident aliquam dolore nam tempora molestiae voluptate voluptatum officia ea omnis vel, sunt eum corrupti id culpa debitis ex dolorum enim voluptatem quasi eligendi? Blanditiis, quaerat. Et, necessitatibus sed molestiae dolores laudantium alias inventore repellendus exercitationem odio nesciunt deserunt dolorem eius, similique fuga suscipit ullam nisi rerum odit veritatis tenetur itaque dolor dolorum quaerat nulla. Quidem pariatur culpa, rerum deserunt dignissimos possimus. Odio quae, harum amet, autem aperiam perferendis optio sint recusandae ut est, unde obcaecati officia beatae. Nesciunt laudantium veniam laboriosam itaque ipsum expedita inventore distinctio eligendi a ex harum corporis vero aperiam nisi ullam perspiciatis deleniti tenetur sed aspernatur aliquid nemo dolor, provident cupiditate commodi. Veniam, id unde laboriosam ut tempore, reiciendis culpa quaerat velit esse nobis soluta placeat atque ipsum voluptas quo? Libero omnis quasi rerum deserunt repellendus, repellat temporibus dignissimos numquam laboriosam vero dolores explicabo, id nihil iure tenetur.</p>
+            <div class="widget">
+                Widget
+            </div>
+            <p>Similique, aliquam? Adipisci architecto qui molestias, laudantium reprehenderit officia impedit ipsam tempora, praesentium numquam, excepturi quia non dicta mollitia dolore. Vitae, distinctio nobis. Voluptates dolor cumque itaque saepe beatae, mollitia non perferendis, tempore quod dolorum quaerat at repellendus quasi eveniet voluptatem quis expedita velit optio ullam dolorem animi ipsam eaque officia. Facere ducimus itaque ipsum cumque tenetur sed facilis non tempora dolore expedita, sit voluptas laudantium quo praesentium, atque repellendus blanditiis sunt sequi. Earum, corporis. Perspiciatis natus earum officia corporis maiores iure aliquid. Laborum possimus facilis aliquam consequatur quibusdam rerum quia tempore vel, laboriosam molestias ullam magnam! Distinctio necessitatibus praesentium delectus at ratione blanditiis ex illum, amet quod quo iusto consequuntur fuga natus qui aspernatur quam deserunt assumenda animi quia expedita sint molestias dicta. Illo in dicta optio exercitationem, perferendis id maiores autem distinctio iste assumenda deleniti dignissimos itaque, facilis enim natus corporis? Est in maiores, deserunt nemo corporis esse.</p>
+            <p>Suscipit voluptas ipsa, provident laudantium dolorem reiciendis vel nisi veritatis corporis voluptate fugiat aperiam, quas expedita quaerat obcaecati atque non, nobis commodi ipsam veniam? Ipsam recusandae labore aperiam natus dolores nobis explicabo corporis cum inventore deleniti tempora accusantium dolore, quam velit maxime. Aliquam nisi tenetur quae nostrum repellat, sit minima modi consequatur. Aperiam atque, neque quod quibusdam at libero voluptatem dicta ex, possimus expedita nostrum quam quae provident ea assumenda eveniet maiores quidem velit minus! Hic illo quae excepturi ipsum architecto at ea beatae corporis animi et ipsam distinctio laudantium, sit blanditiis doloribus, totam accusantium labore nam. Earum sint ullam perspiciatis illum sapiente ipsa dolores vero modi quibusdam optio nihil veritatis neque vitae, ipsam eaque maiores dicta dolore. Aliquam natus quos ipsa velit cumque cupiditate voluptates in illum soluta alias vero, consequatur corrupti fuga libero error fugiat temporibus sed. Aperiam culpa itaque at laborum quisquam totam illum? Ab, consequatur quibusdam.</p>
+            <p>Cupiditate, rem? Rerum expedita dolore voluptate consectetur molestias ipsam inventore velit harum, sed, ad explicabo consequuntur numquam architecto, voluptatem optio perspiciatis maxime aspernatur deserunt dolorem? Voluptas ratione veritatis earum maxime nihil tenetur temporibus quisquam ipsam aut dolor? Repellendus facere necessitatibus nostrum quos? Obcaecati ducimus commodi animi mollitia assumenda quis optio vitae! Illo iure, odit, est a praesentium et provident repudiandae quisquam facere dolores ut voluptates cupiditate. Ratione vel facere animi exercitationem accusamus nihil atque quod odit quae, libero expedita beatae, magni esse eum recusandae laboriosam doloribus nisi veritatis id fugit assumenda accusantium ad nulla reiciendis! Cum voluptates explicabo iure voluptate delectus! Rem, dolore eveniet! Nulla laborum magni mollitia cum unde, numquam ex aspernatur ad doloremque maxime blanditiis provident alias est corporis quos fugiat sunt odit, quasi et nam harum! Iusto nesciunt quia eum, dolores similique, optio ipsam possimus voluptas cumque, sit eius pariatur eveniet voluptates. Eius amet doloribus asperiores beatae?</p>
+        </div>
+
+        <div id="footer">
+            Footer
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() { 
+            var window_scroll_top, window_scroll_left;
+            
+            // $(window).scrollTop(200);
+            // $(window).scroll(function() {
+            //     window_scroll_top = $(window).scrollTop();
+            //     // console.log(window_scroll_top);
+
+            //     window_scroll_left = $(window).scrollLeft();
+            //     console.log(window_scroll_top + " - " + window_scroll_left);
+            // })
+
+            // var content_top = $('#content').offset().top;
+            // var footer_top = $('#footer').offset().top;
+            // console.log(content_top + " - " + footer_top);
+
+            var widget_top_content, widget_left_content;
+            widget_top_content = $('.widget').position().top;
+            widget_left_content = $('.widget').position().left;
+            console.log(widget_top_content + ' - ' + widget_left_content);
+    });
+    </script>
+</body>
+</html>

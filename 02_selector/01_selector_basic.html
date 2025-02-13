@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector cơ bản</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="box1" class="box">
+        <p>Đây là phần tử thứ 1</p>
+    </div>
+    <div id="box2" class="box">
+        <p>Đây là phần tử thứ 2</p>
+    </div>
+    <div id="box3" class="box">
+        <p>Đây là phần tử thứ 3</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // 1. Thiết lập text có màu đỏ
+            $('p').css('color', 'red');
+
+            // 2. Thiết lập các box có css (width: 200px, height: 100px; margin: 20px; border: 1px solid #333)
+            $('.box').css({
+                'width': '200px',
+                'height': '100px',
+                'margin': '20px',
+                'border': '1px solid #333'
+            });
+
+            // 3. Thiết lập box1 có bg: black
+            $('#box1').css('background-color', 'black');
+
+            // 4. Thiết lập box2, box3 có bg: gold;
+            $('#box2, #box3').css('background-color', 'gold');
+        });
+            
+    </script>
+</body>
+</html>

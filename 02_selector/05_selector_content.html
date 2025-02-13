@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm selector lọc theo nội dung</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <ul class="list-post">
+        <li> Bài 1</li>
+        <li></li>
+        <li> Phần 3</li>
+        <li> Bài 4</li>
+        <li>
+            <ul class="sub">
+                <li class="color-red">Phần tử 4.1</li>
+                <li>Phần tử 4.2</li>
+            </ul>
+        </li>
+        <li> Bài 5</li>
+        <li> Bài 6</li>
+        <li>
+            <ul>
+                <li>Phần tử 6.1</li>
+                <li>Phần tử 6.2</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        $(document).ready(function() { 
+           // 1. Tìm các phần tử có chứa nội dung "Phần" => màu đỏ
+           $("ul li:contains('Phần')").css('color', 'red');
+            // 2. Tìm phần tử không có nội dung 
+           $('ul li:empty').text('Không có nội dung').css('color', 'red');
+            
+           // 3. Tìm phần tử có ít nhất 1 phần tử con là selector cho trước
+            $("ul.sub:has('.color-red')").css('border', '1px solid red');
+           
+           // 4. Tìm tất cả các phần tử con, hoặc có nội dung // ngược vs empty
+            $('ul li:parent').css('color', 'blue');
+        });
+    </script>
+</body>
+</html>

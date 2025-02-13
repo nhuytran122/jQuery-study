@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Slider Product</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 23px;
+        }
+        #wrapper {
+            width: 960px;
+            margin: 0px auto;
+        }
+        h1 {
+            font-size: 34px;
+            padding: 20px 0px;
+            margin: 10px 0px;
+        }
+        #show{
+            margin-left: 40px;
+            width: 350px;
+            height: 350px;
+            overflow: hidden;
+        }
+        #show img {
+            max-width: 100%;
+            height: auto;
+        }
+        #wp-list-thumb{
+            margin-top: 30px;
+        }
+        #wp-list-thumb ul#list-thumb li{
+            width: 80px;
+            float: left;
+            margin-right: 10px;
+            list-style: none;
+        }
+
+        #wp-list-thumb ul#list-thumb li:last-child{
+            margin-right: 0px;
+        }
+
+        #wp-list-thumb ul#list-thumb li a img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #wp-list-thumb ul#list-thumb li.active{
+            border: 1px solid #333;
+            border-radius: 50%;
+        }
+
+        .border-img{
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <h1>Basic Slider Product</h1>
+    <div id="wp-slider">
+        <div id="show">
+            <img src="images/thumb-1.png" alt="">
+        </div>
+        <div id="wp-list-thumb">
+            <ul id="list-thumb">
+                <li><a href=""><img src="images/thumb-2.png" alt=""></a></li>
+                <li><a href=""><img src="images/thumb-1.png" alt=""></a></li>
+                <li><a href=""><img src="images/thumb-3.png" alt=""></a></li>
+                <li><a href=""><img src="images/thumb-4.png" alt=""></a></li> 
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        //Hiển thị hình ảnh mặc định
+        var src_img_first = $('#list-thumb li:first-child img').attr('src');
+        $('#show img').attr('src', src_img_first);
+
+        var src_img_click;
+        $('#list-thumb li a').click(function(){
+            // Lấy src từ hình ảnh được chọn
+            src_img_click = $(this).children('img').attr('src');
+            console.log(src_img_click);
+
+            // Gán src lấy được cho src của #show
+            $('#show img').attr('src', src_img_click);
+
+            $('#list-thumb li').removeClass('active');
+            $(this).parent('li').addClass('active');
+
+            // C2:
+            // $('#list-thumb li a img').removeClass('border-img');
+            // $(this).children('img').addClass('border-img');
+            return false
+        });
+    });
+</script>
+
+</body>
+</html>

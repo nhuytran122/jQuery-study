@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Slider Product</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box img {
+            width: 300px;
+            height: 300px;
+        }
+        .buttons img{
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .border-img{
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Basic Slider Product</h1>
+    <div class="box">
+        <img src="" alt="">
+    </div>
+    <div class="buttons">
+        <img src="images/thumb-2.png" alt="">
+        <img src="images/thumb-1.png" alt="">
+        <img src="images/thumb-3.png" alt="">
+        <img src="images/thumb-4.png" alt="">
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        var initImg = $('.buttons img:first-child').attr('src');
+        $('.box img').attr('src', initImg);
+
+        $('.buttons img').click(function(){
+            var srcImg = $(this).attr('src');
+            $('.box img').attr('src', srcImg);
+            $('.buttons img').removeClass('border-img');
+            $(this).addClass('border-img');
+        });
+    });
+</script>
+
+</body>
+</html>

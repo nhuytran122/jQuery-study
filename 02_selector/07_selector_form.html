@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm selector về form</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+        form *{
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+    <form>
+        <input type="text" name="">
+        <input type="password" name="" disabled="disabled">
+        <input type="checkbox" name="hobby" value="game" checked="checked">
+        <input type="checkbox" name="hobby" value="music">
+        <input type="checkbox" name="hobby" value="read" checked="checked">
+        <input type="radio" name="">
+        <textarea></textarea>
+        <button>Button</button>
+        <input type="submit" value="">
+        <input type="file" name="">
+        <select name="">
+            <option>Lựa chọn</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option selected="selected">Option 4 selected</option>
+        </select>
+    </form>
+    <script>
+        $(document).ready(function() { 
+           // 1. Đếm số input trên form
+           var num_input = $("form :input").length;
+        //    alert(num_input);
+           // 2. Input text -> bg red
+           $("form :text").css('border', '2px solid red');
+
+           // 3. Input password -> bg green
+           $("form :password").css('border', '2px solid gray');
+
+           // 4. Đếm số lượng phần tử select đã được chọn
+            var input_select_selected = $("form :selected");
+            // input_select_selected.each(function() {
+            //     alert($(this).text());
+            // });
+
+            // 4. Đếm số lượng phần tử input đã được check
+            var input_checkbox_checked = $("form :checkbox:checked");
+            input_checkbox_checked.each(function() {
+                alert($(this).val());
+            });
+
+            // 5. Phần tử disabled => border red
+            $("form :disabled").css('border', '2px solid orange');
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm selector về cấu trúc cấp bậc</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+        form input{
+            display: block;
+            margin: 10px;
+        }
+    </style>
+    <ul id="main-menu">
+        <li><a href="">Menu 1</a></li>
+        <li>
+            <a href="">Menu 2</a>
+            <ul class="sub-menu">
+                <li><a href="">Submenu 2.1</a></li>
+                <li><a href="">Submenu 2.2</a></li>
+                <li><a href="">Submenu 2.3</a></li>
+            </ul>
+        </li>
+        <li><a href="">Menu 3</a></li>
+        <li><a href="">Menu 4</a></li>
+        <li><a href="">Menu 5</a></li>
+
+        <form>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+            <!-- <label for="password">Password</label> -->
+            <input type="password" name="password" id="password">
+        </form>
+    </ul>
+    <script>
+        $(document).ready(function() { 
+           // 1. Menu cấp 1 => màu đỏ
+           $("#main-menu > li > a").css('color', 'red');
+
+           // 2. Tất  cả thẻ a trong main menu
+           $("#main-menu  a").css('color', 'green');
+
+           // 3. In vào giá trị của input "đã có label" nếu nó có label phía trên
+        //    $("form label + input").val('Đã có label');
+
+           // 4. Toàn bộ những input phía sau label có value "Đứng sau label"
+           $("form label ~ input").val('Đứng sau label');
+        });
+    </script>
+</body>
+</html>

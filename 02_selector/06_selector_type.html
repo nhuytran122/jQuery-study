@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm selector theo loại</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <a href="">Link 1</a>
+        <p>Doc 1</p>
+        <h2>Tiêu đề 1</h2>
+        <a href="">Link 2</a>
+        <p>Doc 2</p>
+        <h2>Tiêu đề 2</h2>
+        <a href="">Link 3</a>
+        <p>Doc 3</p>
+        <h2>Tiêu đề 3</h2>
+
+        <div class="box">
+            <h2> Tieu de 5</h2>
+            <h2> Tieu de 6</h2>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() { 
+           $(".box p:first-of-type").css('color', 'red');
+
+           $(".box p:last-of-type").css('color', 'red');
+
+           $(".box h2:only-of-type").css('color', 'green');
+        });
+    </script>
+</body>
+</html>

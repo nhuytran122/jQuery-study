@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức làm việc về class</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+        .highlight{
+            color: red;
+            background: yellow;
+        }
+    </style>
+    <p>Para 1</p>
+    <p>Para 2</p>
+    <p>Para 3</p>
+    <p>Para 4</p>
+    <p>Para 5</p>
+    <script>
+        $(document).ready(function() { 
+            // Click là hightlight
+            // $('p').click(function() {
+            //     $(this).addClass('highlight');
+            // });
+
+            // Chỉ hightlight 1 dòng
+            // $('p').click(function() {
+            //     if(!$(this).hasClass('highlight')){
+            //         $('p').removeClass('highlight');
+            //         $(this).addClass('highlight');
+            //     }
+            // });
+
+            // Bật / tắt hightlight trên từng dòng
+            // $('p').click(function() {
+            //     $(this).toggleClass('highlight');
+            // });
+            
+            // Chỉ hightlight 1 dòng -> xóa hightlight all + bật hightlight
+            $('p').click(function() {
+                $('p').removeClass('highlight');
+                $(this).toggleClass('highlight');
+            });
+        })
+    </script>
+</body>
+</html>

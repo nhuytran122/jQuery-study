@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện resize</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+    </style>
+    <h1>Sự kiện resize</h1>
+    <p id="size_width">
+        Độ rộng trình duyệt: <span id="result"></span>
+    </p>
+    
+    <script>
+        $(document).ready(function() { 
+            var size_width = $(window).width();
+            $(window).resize(function() {
+                size_width = $(window).width();
+                // alert('Resizing');
+                $('#size_width span#result').text(size_width + 'px');
+            });
+        });
+    
+    </script>
+</body>
+</html>

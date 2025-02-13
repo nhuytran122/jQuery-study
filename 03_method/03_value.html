@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức làm việc về giá trị</title>
+    <script src="/import/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+        input{
+            display: block;
+            margin: 5px 10px;
+        }
+    </style>
+    <h1>Form login</h1>
+    <form id="form-login" action="" method="POST">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" value="">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" value="">
+        <input type="submit" name="sm_login" value="Login"></input>
+        <div id="result">
+
+        </div>
+    </form>
+    <script>
+        $(document).ready(function() { 
+            // .val()
+            // $('#form-login').submit(function(e) {
+            //     var username = $('#username').val();
+            //     var password = $('#password').val();
+            //     alert(username + ": " + password);
+            //     return false; // Huỷ reload submit, link thẻ a
+            // });
+
+            // .val(value)
+            // var username = $('#username').val('admin');
+
+            // .text(value) & .text();
+            // $('#form-login').submit(function(e) {
+            //     var username = $('#username').val();
+            //     var password = $('#password').val();
+            //     $('#val-username').text(username);
+            //     $('#val-password').text(password);
+                
+            //     alert($('#val-username').text());
+
+            //     return false; //
+            // });
+
+            // html(stringHtml)
+            $('#form-login').submit(function(e) {
+                var username = $('#username').val();
+                var password = $('#password').val();
+                $('#val-username').text(username);
+                $('#val-password').text(password);
+                
+                var str_result;
+                str_result = "<p>Username: <strong id='val-username'>" + username + "</strong></p> <p>Password: <strong id='val-password'>" + password + "</strong></p>";
+                $('#result').html(str_result);
+                // alert(str_result);
+            // .html()
+                alert($('#result').html());
+                return false; 
+            });
+        })
+    </script>
+</body>
+</html>
